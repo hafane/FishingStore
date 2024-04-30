@@ -1,0 +1,48 @@
+.Bbg {
+   width: 70%;
+   background-color: white;
+   margin: 0 auto;
+   margin-top: 50px;
+   margin-bottom: 50px;
+}
+
+.Basket {
+    padding: 48px;
+}
+
+.basketHead {
+    margin-bottom: 10px;
+}
+
+.itemsContainer {
+    width: auto;
+}
+
+.ulBasket {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 60px;
+}
+
+.cartImage {
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    height: 120px;
+    margin: 55px auto;
+}
+
+.cartEmpty {
+    text-align: center;
+    font-size: 27px;
+    color: rgba(127, 127, 127, 0.8);
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.basketFooter {
+    display: flex;
+    justify-content: space-between;
+}

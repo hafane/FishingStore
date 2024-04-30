@@ -1,0 +1,25 @@
+.listItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listBtn {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    font-size: 16px;
+    border: none;
+    color: gray;
+    background-color: transparent;
+    outline: none;
+}
+
+.btn:hover {
+    color: rgba(255, 0, 0, 0.514);
+    transition: all 0.3s linear
+}

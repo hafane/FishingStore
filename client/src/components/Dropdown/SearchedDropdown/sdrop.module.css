@@ -1,0 +1,36 @@
+.srchDrop {
+    padding: 10px 0;
+    margin: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    right: auto;
+    left: 30.2%;
+    top: 51px;
+    width: 39%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.srchUl {
+    display: flex;
+    flex-direction: column;
+}
+
+.srchLi {
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.137);
+}
+
+.srchLi:hover {
+    background-color: rgba(128, 128, 128, 0.205);
+}
+
+
+.itemImg {
+    width: 25%;
+    border-radius: 20px;
+}

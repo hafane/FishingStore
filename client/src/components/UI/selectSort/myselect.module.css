@@ -1,0 +1,20 @@
+.select {
+    background-color: transparent;
+    width: 50%;
+    font-size: 14px;
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+
+.select:focus {
+    outline: none;
+}
+
+.select:hover {
+    color: gray;
+}

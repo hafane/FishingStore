@@ -1,0 +1,118 @@
+.mainBg {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.headCon {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+    padding: 20px 20px;
+}
+
+.headH {
+    font-weight: 800;
+    margin-bottom: 20px;
+    border-bottom: 2px solid gray;
+}
+
+.headInfo {
+    display: flex;
+    padding: 5px 0;
+    justify-content: space-around;
+}
+
+.infoImg {
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 0 rgba(165, 165, 165, 0.75);
+}
+
+.infoS {
+    width: 50%;
+}
+
+.infoH {
+    color: rgba(63, 99, 93, 0.5);
+}
+
+.table {
+    width: 100%;
+}
+
+.second {
+    background-color: lightgray;
+}
+
+.table td:first-child {
+    font-size: 20px;
+    text-align: left;
+}
+
+.priceInfo {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.priceD {
+    width: 60%;
+    padding: 10px;
+    background-color: rgba(211, 211, 211, 0.329);
+    border-radius: 20px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.footerCon {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    padding: 20px 20px;
+    gap: 20px;
+}
+
+.review {
+    border-bottom: 2px solid gray;
+}
+
+.revH {
+    text-transform: uppercase;
+    color: rgba(63, 99, 93, 0.5);
+}
+
+.addcomment {
+    background-color: rgba(211, 211, 211, 0.329);
+    border: 2px solid rgba(211, 211, 211, 0.329);
+    width: auto;
+    border-radius: 5px;
+    width: 75%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    .mainBg {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .headInfo {
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .infoS {
+        width: auto;
+    }
+}

@@ -1,0 +1,162 @@
+.headerBg {
+    background-color: rgb(35, 41, 40);
+    grid-gap: 40px;
+    display: grid;
+    padding: 0 20px;
+}
+
+.headerMain {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.headerWrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hA {
+    text-decoration: none;
+}
+
+.logoCon {
+    padding: 5px;
+    border-radius: 5px;
+    background: linear-gradient(0deg, rgba(128, 128, 128, 0.205) 0%, rgba(35,41,40,1) 100%);
+}
+
+.logoTitle {
+    color: white;
+    font-family: "Lugrasimo", cursive;
+}
+
+.menuWrap {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    width: 100%;
+}
+
+.List {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.Li {
+    display: flex;
+    padding: 10px;
+    text-align: center;
+}
+
+.Li i {
+    margin-right: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.Li:hover {
+    filter: brightness(90%);
+}
+
+.headText {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.srch {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.srchInpCon {
+    justify-content: center;
+    display: flex;
+}
+
+.srchInp {
+    min-width: 50%;
+    max-width: 70%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.205);
+}
+
+.srchInp:focus {
+    outline: none;
+    color: white;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 800;
+}
+
+.btnA {
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.205);;
+}
+
+.icoText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.btnText {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    margin-top: 4px;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.btnText:hover {
+    filter: brightness(90%);
+}
+
+.headerF {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menuLink {
+    display: flex;
+}
+
+@media screen and (min-width: 768px) {
+    .menuWrap {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .headerWrap {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hA {
+        text-align: center;
+    }
+}

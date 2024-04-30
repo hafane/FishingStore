@@ -1,0 +1,14 @@
+.myInput {
+    width: 100%;
+    font-size: 14px;
+    margin: 5px 0;
+    padding: 13px 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+.myInput:focus {
+    border: 1px dashed rgba(255, 0, 0, 0.514);
+    transition: all 0.2s linear; 
+}

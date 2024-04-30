@@ -1,0 +1,18 @@
+.SelectTBS {
+    width: 40%;
+    font-size: 14px;
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+.SelectTBS:focus {
+    outline: none;
+}
+
+.SelectTBS:hover {
+    border: 1px dashed rgba(255, 0, 0, 0.514);
+    transition: all 0.2s linear;
+}

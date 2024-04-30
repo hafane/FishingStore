@@ -1,0 +1,61 @@
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.comment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comhead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user {
+    color: rgba(63, 99, 93, 0.5);
+}
+
+.title, .desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.comrate {
+    display: flex;
+    gap: 10px;
+    text-align: left;
+}
+
+.rate {
+    padding: 10px;
+    background-color: rgba(211, 211, 211, 0.329);
+    border-radius: 5px;
+}
+
+.listBtn {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    font-size: 16px;
+    border: none;
+    color: gray;
+    background-color: transparent;
+    outline: none;
+}
+
+.btn:hover {
+    color: rgba(255, 0, 0, 0.514);
+    transition: all 0.3s linear
+}

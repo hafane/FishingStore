@@ -1,0 +1,41 @@
+
+.itemTile {
+    background-color: rgba(0, 0, 0, 0.089);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0px rgba(165, 165, 165, 0.5);
+    margin-bottom: 10px;
+    padding: 0px 0px 10px 0px;
+    list-style: none;
+}
+
+.itemTile:hover {
+    .imgCon {
+        filter: brightness(90%);
+    }
+}
+
+.imgCon {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.itemImg {
+    cursor: pointer;
+}
+
+.itemMiddle {
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.itemP {
+    font-size: 14px;
+    color: gray;
+}
+
+.itemFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

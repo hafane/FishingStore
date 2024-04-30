@@ -1,0 +1,44 @@
+.itemBasket {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid rgba(128, 128, 128, 0.219);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.itemImg {
+    width: 120px;
+    border-radius: 10px;
+    box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.295);
+}
+
+.infoCon {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.itemBtn {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    font-size: 20px;
+    border: none;
+    color: gray;
+    background-color: transparent;
+    outline: none;
+}
+
+.btn:hover {
+    color: rgba(255, 0, 0, 0.514);
+    transition: all 0.3s linear
+}

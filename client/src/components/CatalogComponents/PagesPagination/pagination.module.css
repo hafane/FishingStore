@@ -1,0 +1,25 @@
+.pgMain {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pgBtn {
+   width: 30px;
+   height: 30px;
+   border: none;
+   border-radius: 2px;
+   cursor: pointer;
+   color: white;
+   background-color: rgba(63, 99, 93, 0.5); 
+}
+
+.active {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.pgBtn:hover {
+    filter: brightness(90%);
+}

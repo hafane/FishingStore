@@ -1,0 +1,39 @@
+.brandBar {
+    width: auto;
+    width: 100%;
+}
+
+.ulBrand {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px;
+}
+
+.liBrand {
+    color: white;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.pBrand {
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.pBrand:hover {
+    color: gray;
+}
+
+.active {
+    background-color: rgba(63, 99, 93, 0.5);
+    color: white;
+}
+
+@media screen and (max-width: 767px) {
+    .brandBar {
+        font-size: 14px;
+    }
+}

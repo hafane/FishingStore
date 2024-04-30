@@ -1,0 +1,47 @@
+.main {
+    gap: 25px;
+    display: flex;
+    margin: 0 auto;
+    width: auto;
+    padding: 16px;
+    min-width: 50%;
+    border-radius: 0 0 5px 5px;
+    border: 2px solid rgba(128, 128, 128, 0.205);
+}
+
+.category, .brands {
+    gap: 20px;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.catHead, .brandHead {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+}
+
+.addBtn {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    font-size: 16px;
+    border: none;
+    color: gray;
+    background-color: transparent;
+    outline: none;
+}
+
+.addBtn:hover {
+    color: rgba(255, 0, 0, 0.514);
+    transition: all 0.3s linear
+}
+
+.List {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}

@@ -1,0 +1,105 @@
+.footerBg {
+    background-color: rgb(35, 41, 40);
+    display: grid;
+    padding: 10px 10px;
+    height: 30vh;
+}
+
+.footerLogo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logoCon {
+    padding: 5px;
+}
+
+.logoTitle {
+    color: white;
+    font-family: "Lugrasimo", cursive;
+}
+
+.footerLogo p {
+    font-size: 18px;
+    color: white;
+}
+
+.footerInfo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerSC, .footerPay {
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+.sc, .pay {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+
+.tgLogo, .ytLogo, .vkLogo {
+    width: 31px;
+    height: 31px;
+    display: block;
+    background-size: contain;
+    margin-top: 18px;
+}
+
+.tgLogo {
+    background-image: url('./../../assets/TGLogo.png');
+}
+
+.ytLogo {
+    background-image: url('./../../assets/YT.png');
+}
+
+.vkLogo {
+    background-image: url('./../../assets/VKLogo.png');
+}
+
+.cardImg, .spbImg, .qiwiImg {
+    width: 80px;
+    height: 62px;
+    display: block;
+    background-size: contain;
+}
+
+.cardImg {
+    background-image: url('https://rybomania.ru/img/payment/visamastermir.png');
+}
+
+.spbImg {
+    background-image: url('https://rybomania.ru/img/payment/sbp.png');
+}
+
+.qiwiImg {
+    background-image: url('https://rybomania.ru/img/payment/qiwi_.png');
+}
+
+@media screen and (min-width: 768px) {
+    .menuWrap {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .headerWrap {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footerBg {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footerInfo {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

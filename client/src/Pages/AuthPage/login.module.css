@@ -1,0 +1,26 @@
+.auth {
+    width: 50vw;
+    height: 40vh;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 25px 16px;
+}
+
+.authM {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 60%;
+    height: 60%;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.goTo:hover {
+    color: brown;
+}
