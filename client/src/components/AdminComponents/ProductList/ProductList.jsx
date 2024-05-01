@@ -8,9 +8,10 @@ const ProductList = observer(({ item, brand, type }) => {
     const typeName = type.find(t => t.id === item.typeId)?.name
     const brandName = brand.find(b => b.id === item.brandId)?.name
 
-    const removeItem = (id) => {
-        deleteOneItem({id: id}).then(data => alert('Успешно удалено!'))
+    const removeItem = (id, img) => {
+        deleteOneItem({id: id, img: img}).then(data => alert('Успешно удалено!'))
     }
+    
 
     return (
         <>
@@ -27,7 +28,7 @@ const ProductList = observer(({ item, brand, type }) => {
                 <td>
                     <p>{brandName}</p>
                 </td>
-                <td>
+                <td> 
                     <strong>{item.price} ₽</strong>
                 </td>
                 <td>
@@ -35,7 +36,7 @@ const ProductList = observer(({ item, brand, type }) => {
                         <button className={cl.btn}>
                             <i class="fa-solid fa-pencil"></i>
                         </button>
-                        <button onClick={() => removeItem(item.id)} className={cl.btn}>
+                        <button onClick={() => removeItem(item.id, item.img)} className={cl.btn}>
                             <i class="fa-regular fa-trash-can"></i>
                         </button>
                     </div>
