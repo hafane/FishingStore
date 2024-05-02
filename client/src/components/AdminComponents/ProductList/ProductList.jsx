@@ -1,6 +1,6 @@
 import React from 'react';
 import cl from './productlist.module.css'
-import { deleteOneItem } from '../../../http/itemAPI';
+import { deleteItemId, deleteOneItem } from '../../../http/itemAPI';
 import { observer } from 'mobx-react-lite';
 
 const ProductList = observer(({ item, brand, type }) => {
@@ -9,6 +9,7 @@ const ProductList = observer(({ item, brand, type }) => {
     const brandName = brand.find(b => b.id === item.brandId)?.name
 
     const removeItem = (id, img) => {
+        deleteItemId({itemId: id}).then(d => alert('Успешно.'))
         deleteOneItem({id: id, img: img}).then(data => alert('Успешно удалено!'))
     }
     
