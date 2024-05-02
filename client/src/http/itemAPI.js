@@ -64,6 +64,11 @@ export const deleteBasketItem = async (basketId, itemId) => {
     return data;
 }
 
+export const deleteItemId = async (itemId) => {
+    const {data} = await $authHost.delete('api/basketItem/all', {data : itemId})
+    return data
+}
+
 export const createBasketItem = async (basketId, itemId) => {
     const { data } = await $authHost.post('api/basketItem',  basketId, itemId);
     return data;

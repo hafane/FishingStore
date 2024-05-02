@@ -15,7 +15,7 @@ class BasketItemController {
             basketItems = await BasketItem.findAll({where: {basketId}})
         }
         return res.json(basketItems)
-    }
+    } 
 
     async delete(req, res) {
         const {basketId, itemId} = req.body
@@ -24,7 +24,16 @@ class BasketItemController {
             return res.status(404).json({message: 'Предмет не найден.'})
         }
         return res.json({message: 'Успешно удалено.'})
-    }
+    } 
+
+    async deleteItemId(req, res) {
+        const {itemId} = req.body
+        const deleteBasketItemId = await BasketItem.destroy({where: {itemId}})
+        if(!deleteBasketItemId) {
+            return res.status(404).json({message: 'Предмет не найден.'})
+        }
+        return res.json({message: 'Успешно удалено.'})
+    } 
 }
 
 module.exports = new BasketItemController()
