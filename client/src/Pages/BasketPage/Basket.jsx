@@ -12,8 +12,6 @@ const Basket = observer(() => {
 
     const [totalPrice, setTotalPrice] = useState(0)
 
-    // const [basketIsEmpty, setBasketIs] = useState(true)
-
     const type = item.types
     const brand = item.brands
 
@@ -49,19 +47,16 @@ const Basket = observer(() => {
                         <BasketItem key={item.id} item={item} type={type} brand={brand} user={user} />
                     )}
                 </ul>
-                {/* {basketIsEmpty &&
+                {item.basketItem.length === 0 &&
                     <div>
                         <img src='https://rybomania.ru/local/templates/adaptive/components/bitrix/sale.basket.basket/bootstrap5/images/empty_cart.svg' className={cl.cartImage} />
                         <div className={cl.cartEmpty}>Ваша корзина пуста.</div>
                     </div>
-                } */}
+                }
 
                 <div className={cl.basketFooter}>
                     <div>
                         <p>Итоговая цена: <strong>{totalPrice}₽</strong> </p>
-                    </div>
-                    <div className=''>
-                        <MyButton>Перейти к оплате...</MyButton>
                     </div>
                 </div>
             </div>

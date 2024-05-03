@@ -12,7 +12,6 @@ const AdminPage = () => {
 
     const [isShowedSet, setIsShowedSet] = useState(false)
     const [isShowedProd, setIsShowedProd] = useState(false)
-    const [isShowedOrder, setIsShowedOrder] = useState(false)
     
     useEffect(() => {
         fetchBrands().then(data => {
@@ -32,15 +31,8 @@ const AdminPage = () => {
                 <nav className={cl.nav}>
                     <ul className={cl.navList}>
                         <li>
-                            <button onClick={() => setIsShowedOrder(!isShowedOrder)} className={cl.linkBtn}>
-                                <i class="fa-solid fa-bag-shopping"></i>
-                                <span className={cl.textBtn}>Заказы</span>
-                            </button>
-                        </li>
-                        <li>
                             <button onClick={() => {
                                 setIsShowedProd(!isShowedProd)
-                                setIsShowedOrder(false)
                                 setIsShowedSet(false)}}
                                 className={cl.linkBtn}>
                                 <i class="fa-regular fa-clipboard"></i>
@@ -51,8 +43,7 @@ const AdminPage = () => {
                             <button
                                 onClick={() => {
                                     setIsShowedSet(!isShowedSet)
-                                    setIsShowedProd(false)
-                                    setIsShowedOrder(false)}}
+                                    setIsShowedProd(false)}}
                                 className={cl.linkBtn}>
                                 <i class="fa-solid fa-gears"></i>
                                 <span className={cl.textBtn}>Настройки</span>
