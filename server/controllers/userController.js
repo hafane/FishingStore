@@ -1,7 +1,7 @@
 const ApiError = require('../error/ApiError')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const {User, Basket, BasketItem} = require('../models/models')
+const {User, Basket} = require('../models/models')
 
 const generateJwt = (id, email, role, basketId) => {
    return jwt.sign({id: id, email, role, basketId}, process.env.SECRET_KEY, {expiresIn: '24h'})
@@ -28,11 +28,11 @@ class UserController {
     async login(req, res, next) {
         const {email, password} = req.body
         const user = await User.findOne({where: {email}})
-        const userId = user.id
-        const basket = await Basket.findOne({where: {userId}})
         if(!user) {
             return next(ApiError.badRequest('Пользователь с таким именем не найден!'))
         }
+        const userId = user.id
+        const basket = await Basket.findOne({where: {userId}})
         let comparePassword = bcrypt.compareSync(password, user.password)
         if(!comparePassword) {
             return next(ApiError.badRequest('Неверный пароль!'))
