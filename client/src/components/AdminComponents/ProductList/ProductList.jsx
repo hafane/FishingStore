@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cl from './productlist.module.css'
 import { deleteItemId, deleteOneItem } from '../../../http/itemAPI';
 import { observer } from 'mobx-react-lite';
+import ChangeInfoModal from '../../modals/ChangeItemInfoModal/ChangeInfoModal';
 
 const ProductList = observer(({ item, brand, type }) => {
+
+    const [ShowModalChange, setShowModalChange] = useState(false)
 
     const typeName = type.find(t => t.id === item.typeId)?.name
     const brandName = brand.find(b => b.id === item.brandId)?.name
 
-    const removeItem = (id, img) => {
+    const removeItem =  (id, img) => {
         deleteItemId({itemId: id}).then(d => alert('Успешно.'))
         deleteOneItem({id: id, img: img}).then(data => alert('Успешно удалено!'))
     }
@@ -34,15 +37,18 @@ const ProductList = observer(({ item, brand, type }) => {
                 </td>
                 <td>
                     <div className={cl.listBtn}>
-                        <button className={cl.btn}>
-                            <i class="fa-solid fa-pencil"></i>
+                        <button onClick={() => setShowModalChange(true)} className={cl.btn}>
+                            <i class="fa-solid fa-pencil" title='Изменить'></i>
                         </button>
                         <button onClick={() => removeItem(item.id, item.img)} className={cl.btn}>
-                            <i class="fa-regular fa-trash-can"></i>
+                            <i class="fa-regular fa-trash-can" title='Удалить предмет'></i>
                         </button>
                     </div>
                 </td>
             </tr>
+            {ShowModalChange && 
+                <ChangeInfoModal id={item.id} ShowModalChange={ShowModalChange} setShowModalChange={setShowModalChange} />
+            }
         </>
     );
 })

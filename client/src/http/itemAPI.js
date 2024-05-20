@@ -54,6 +54,11 @@ export const deleteOneItem = async (id) => {
     return data
 }
 
+export const updateItemInfo = async (id, name, price, typeId, brandId) => {
+    const { data } = await $authHost.patch('api/item', {id, name, price, typeId, brandId})
+    return data
+}
+
 export const fetchBasket = async (basketId) => {
     const { data } = await $authHost.get('api/basketItem', { params: { basketId } });
     return data;

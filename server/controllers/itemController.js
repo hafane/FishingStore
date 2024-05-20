@@ -39,16 +39,16 @@ class ItemController {
 
         let items
         if (!brandId && !typeId) {
-            items = await Item.findAndCountAll({limit, offset})
+            items = await Item.findAndCountAll({ limit, offset })
         }
         if (brandId && !typeId) {
-            items = await Item.findAndCountAll({where:{brandId}, limit, offset})
+            items = await Item.findAndCountAll({ where: { brandId }, limit, offset })
         }
         if (!brandId && typeId) {
-            items = await Item.findAndCountAll({where:{typeId}, limit, offset})
+            items = await Item.findAndCountAll({ where: { typeId }, limit, offset })
         }
         if (brandId && typeId) {
-            items = await Item.findAndCountAll({where:{typeId, brandId}, limit, offset})
+            items = await Item.findAndCountAll({ where: { typeId, brandId }, limit, offset })
         }
 
         return res.json(items)
@@ -59,30 +59,50 @@ class ItemController {
         const item = await Item.findOne(
             {
                 where: { id },
-                include: [{model: ItemInfo, as: 'info'}]
+                include: [{ model: ItemInfo, as: 'info' }]
             }
         )
         return res.json(item)
     }
 
     async delete(req, res) {
-        const {id, img} = req.body
-        const deleteItem = await Item.destroy({where: {id}})
+        const { id, img } = req.body
+        const deleteItem = await Item.destroy({ where: { id } })
 
-        
-        if(!deleteItem) {
+
+        if (!deleteItem) {
             return res.status(404).json('Item не найден.')
         }
 
         const imgPath = path.resolve(__dirname, '..', 'static', img)
         fs.unlink(imgPath, (err) => {
-            if(err) {
+            if (err) {
                 console.log('Ошибка при удалении img файла ', err)
             }
         })
 
         return res.json('Успешно удалено.')
     }
+
+    async update(req, res, next) {
+        try {
+            const { id, name, price, typeId, brandId } = req.body
+            const item = await Item.findOne({ where: { id } })
+
+            if(name) item.name = name
+            if(price) item.price = price
+            if(typeId) item.typeId = typeId
+            if(brandId) item.brandId = brandId
+
+            await item.save()
+
+            return res.json(item)
+        } catch(err) {
+            next(ApiError.badRequest(err.message))
+        }
+
+    }
+
 }
 
 module.exports = new ItemController()

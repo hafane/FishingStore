@@ -7,5 +7,6 @@ router.post('/', checkRole('ADMIN'), itemController.create)
 router.get('/', itemController.getAll)
 router.delete('/', checkRole('ADMIN'), itemController.delete)
 router.get('/:id', itemController.getOne)
+router.patch('/', itemController.update)
 
 module.exports = router
